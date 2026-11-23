@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>About Aina | Favorites</title>
+	<link rel="stylesheet" href="style1.css">
+	<link rel="icon" type="image/png" href="aina.png">
+<style>
+	*, *::before, *::after {
+		box-sizing: border-box;
+	}
+
+	/* Ensure main container has enough breathing room */
+	main.container {
+		max-width: 960px !important;
+		margin: 0 auto;
+		padding: 1.5rem;
+	}
+
+	/* Full-width Section Boxes */
+	.section-box {
+		display: block !important;
+		background-color: #ffffff;
+		border: 1px solid #F8BBD0;
+		border-radius: 16px;
+		padding: 2rem;
+		margin-bottom: 2.5rem;
+		box-shadow: 0 4px 12px rgba(244, 143, 177, 0.12);
+		width: 100% !important;
+	}
+
+	.section-box h2 {
+		color: #AD1457;
+		border-bottom: 2px solid #F48FB1;
+		padding-bottom: 0.5rem;
+		margin-bottom: 1.5rem;
+		text-align: left;
+	}
+
+	/* Stack the inner card at full width so it isn't squeezed into a narrow column */
+	.grid-2 {
+		display: block !important;
+		width: 100% !important;
+	}
+
+	.fav-card {
+		display: block !important;
+		background: #FFF5F8;
+		border: 1px solid #F8BBD0;
+		border-radius: 12px;
+		padding: 1.5rem;
+		width: 100% !important;
+	}
+
+	.fav-card h3 {
+		color: #AD1457;
+		margin-bottom: 0.75rem;
+		text-align: left;
+	}
+
+	/* Keep headings cleanly above the photo grids (not pushed to the side) */
+	.fav-card h4 {
+		display: block !important;
+		width: 100% !important;
+		color: #D81B60;
+		margin-top: 1.5rem;
+		margin-bottom: 0.85rem;
+		font-size: 1rem;
+		text-align: left;
+	}
+
+	/* 3-Column Poster & Singer Grid */
+	.sub-grid {
+		display: grid !important;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1.25rem;
+		text-align: center;
+		width: 100%;
+	}
+
+	.sub-item {
+		background: #ffffff;
+		padding: 0.65rem;
+		border-radius: 10px;
+		border: 1px solid #F8BBD0;
+		transition: transform 0.25s ease, box-shadow 0.25s ease;
+	}
+
+	.sub-item:hover {
+		transform: translateY(-4px);
+		box-shadow: 0 6px 14px rgba(216, 27, 96, 0.18);
+	}
+
+	.sub-item a {
+		text-decoration: none;
+		color: inherit;
+		display: block;
+	}
+
+	/* Fixed Image Proportions (Changed from 400px to 230px) */
+	.sub-item img {
+		width: 100%;
+		height: 290px;
+		object-fit: cover;
+		object-position: top; /* Keeps faces and movie titles centered at the top */
+		border-radius: 6px;
+		border: 1px solid #FCE4EC;
+		margin-bottom: 0.5rem;
+	}
+
+	.sub-item span {
+		display: block;
+		font-size: 0.88rem;
+		font-weight: 600;
+		color: #4A3E3D;
+	}
+
+	.action-badge {
+		display: inline-block;
+		margin-top: 0.4rem;
+		font-size: 0.75rem;
+		background-color: #FCE4EC;
+		color: #D81B60;
+		padding: 0.2rem 0.65rem;
+		border-radius: 12px;
+		font-weight: 600;
+		transition: all 0.2s ease;
+	}
+
+	.sub-item:hover .action-badge {
+		background-color: #D81B60;
+		color: #ffffff;
+	}
+
+	/* Compact Header Audio Pill */
+	.header-music-pill {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		background-color: #FFF5F8;
+		border: 1px solid #F8BBD0;
+		padding: 0.25rem 0.65rem;
+		border-radius: 25px;
+		font-size: 0.8rem;
+		font-weight: 600;
+		color: #AD1457;
+	}
+
+	.header-music-pill audio {
+		height: 28px;
+		width: 250px;
+	}
+
+	/* Mobile Responsive Stacking */
+	@media (max-width: 650px) {
+		.sub-grid {
+			grid-template-columns: 1fr;
+		}
+		.sub-item img {
+			height: 280px;
+		}
+	}
+</style>
+</head>
+<body>
+
+<!--Header-->
+<header>
+	<nav id="desktop-nav">
+	<div class="logo">
+	<img src="aina.jpg" alt="Aina Afiqah" class="logo-img">
+	<span>Aina Afiqah</span></div>
+	<div>
+	     <ul class="nav-links">
+		<li><a href="index.html">Home</a></li>
+		<li><a href="background.html">About Aina</a></li>
+		<li><a href="achievements.html">Achievements</a></li>
+		<li><a href="contact.html">Contact</a></li>
+		<li><a href="gallery.html">Gallery</a></li>
+		<li><a href="favorite.html" class="active">Favorites</a></li>
+	     </ul>
+	</div>
+	</nav>
+</header>
+
+<!--Main Content-->
+<main class="container">
+
+	<div class="page-navigation">
+    	<a href="gallery.html" class="nav-btn">← Back</a>
+    	<a href="index.html" class="nav-btn nav-btn-home">Home</a>
+    	<span class="nav-btn nav-btn-disabled">Next →</a>
+</div>
+	<!--Header-->
+	<section style="text-align: center; margin-bottom: 2rem;">
+		<h1>Aina's Interests</h1>
+		<p> Aina is an individual with a lot of interests in different things, so these are some of Aina's favorites.</p>
+	<div>
+	<div class="header-music-pill">
+	<span><i>Margaret</i></span>
+	<audio id="bg-music" controls autoplay loop>
+	<source src="margaret.ogg" type="audio/ogg">
+	<source src="margaret.mp3" type="audio/mpeg">
+	Your browser does not support the audio element.
+	</audio></div></div>
+	</section>
+
+<!--Movies & Actors-->
+<div class="section-box">
+	<h2> Movies & Actors</h2>
+	<div class="grid-2">
+		<div class="fav-card"><div>
+		<h3> Favorite Movies & Actors </h3>
+
+	<h4> Favorite Movies (Click  to watch the trailer)</h4>
+	<div class="sub-grid">
+		<div class="sub-item">
+		<a href="https://youtu.be/5VYsnngkS_U?si=LwiIYxUnEJHzm3HR" target="_blank">
+		<img src="hailmary.jpg" alt="Project Hail Mary" onerror="this.src='https://via.placeholder.com/100x120?text=Project Hail Mary';">
+		<span><i>Project Hail Mary</i></span>
+		<span class="action-badge"> Trailer</span></a></div>
+
+		<div class="sub-item">
+		<a href="https://youtu.be/AST2-4db4ic?si=fxcFNFj-14a2brP9" target="_blank">		
+		<img src="littlewoman.jpg" alt="Little Woman" onerror="this.src='https://via.placeholder.com/100x120?text=Little Woman';">
+		<span><i>Little Woman</i></span>
+		<span class="action-badge"> Trailer</span></a></div>
+
+		<div class="sub-item">
+		<a href="https://youtu.be/0pdqf4P9MB8?si=tQr0_ye4KtDdfbqW" target="_blank">
+		<img src="lalaland2.png" alt="La La Land" onerror="this.src='https://via.placeholder.com/100x120?text=La La Land';">
+		<span><i>La La Land</i></span>
+		<span class="action-badge"> Trailer</span></a></div></div>
+
+	<h4> Favorite Actors</h4>
+	<div class="sub-grid">
+		<div class="sub-item">
+		<img src="ryangosling.jpg" alt="Ryan Gosling" onerror="this.src='https://via.placeholder.com/100x120?text=Ryan Gosling';">
+		<span><i>Ryan Gosling</i></span></div>
+
+		<div class="sub-item">
+		<img src="soirseronan.jpg" alt="Saoirse Ronan" onerror="this.src='https://via.placeholder.com/100x120?text=Saoirse Ronan';">
+		<span><i>Saoirse Ronan</i></span></div>
+
+		<div class="sub-item">
+		<img src="lisasurihani.jpg" alt="Lisa Surihani" onerror="this.src='https://via.placeholder.com/100x120?text=Lisa Surihani';">
+		<span><i>Lisa Surihani</i></span></div>
+</div></div></div></div></div>
+ 
+<!--Music &Singers-->
+<div class="section-box">
+	<h2> Songs & Singers</h2>
+	<div class="grid-2">
+	<div class="fav-card"><div>
+	<h3> Favorite Songs & Singers</h3>
+
+	<h4> Favorite Singers</h4>
+	<div class="sub-grid">
+	<div class="sub-item">
+	<img src="lanadelray.jpg" alt="Lana Del Ray" onerror="this.src='https://via.placeholder.com/100x120?text=Lana Del Ray';">
+		<span><i>Lana Del Ray</i></span></div>
+
+	<div class="sub-item">
+	<img src="postmalone.jpg" alt="Post Malone" onerror="this.src='https://via.placeholder.com/100x120?text=Post Malone';">
+		<span><i>Post Malone</i></span></div>
+
+	<div class="sub-item">
+	<img src="martin.jpg" alt="Martin" onerror="this.src='https://via.placeholder.com/100x120?text=Martin';">
+		<span><i>Martin CORTIS</i></span></div></div>
+
+
+<h4>Favorite Songs (Play directly on Spotify)</h4>
+<div class="spotify-grid">
+	
+	<!-- Song 1: Get Free -->
+	<div class="spotify-item">
+	<iframe 
+		style="border-radius:12px" 
+		src="https://open.spotify.com/embed/track/761QvVHTibYjEi2r6A4g4Q?si=aa62b3823f79456a" 
+		width="100%" 
+		height="152" 
+		frameBorder="0" 
+		allowfullscreen="" 
+		allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+		loading="lazy">
+	</iframe>
+	</div>
+
+	<!-- Song 2: Happiness is a Butterfly -->
+	<div class="spotify-item">
+	<iframe 
+		style="border-radius:12px" 
+		src="https://open.spotify.com/embed/track/3lG6OtGDsYAOALxEmubQQm?utm_source=generator" 
+		width="100%" 
+		height="152" 
+		frameBorder="0" 
+		allowfullscreen="" 
+		allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+		loading="lazy">
+	</iframe>
+	</div>
+
+	<!-- Song 3: Colors -->
+	<div class="spotify-item">
+	<iframe 
+		style="border-radius:12px" 
+			src="https://open.spotify.com/embed/track/1TnUURhehaoMWKAqQtirm6?utm_source=generator" 
+			width="100%" 
+			height="152" 
+			frameBorder="0" 
+			allowfullscreen="" 
+			allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+			loading="lazy">
+		</iframe>
+	</div>
+
+</div></div></div></main>
+
+<!--Footer-->
+<footer>
+	<p>&copy; 2026 Designed by Nur Balqis. All rights reserved.</p>
+	<p><b> The website is developed to fulfill the requirement of IMD318.</b></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
